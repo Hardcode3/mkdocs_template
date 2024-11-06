@@ -15,9 +15,6 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.<YOUR_TOKEN_HERE> }}
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5

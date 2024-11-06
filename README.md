@@ -91,9 +91,7 @@ Each new markdown file has to be registered in the [mdkocs.yml](mdkocs.yml) file
 
 #### Deploying Documentation to GitHub Pages
 
-1. Create a token for Github actions to read the repository
-2. Replace the token where it is mentioned in [.github\workflows\deploy.yaml](.github\workflows\deploy.yaml).
-3. Repository will automatically be deployed on pull request on the main branch: it will build and push the `site/` folder to the `gh-pages` branch, which GitHub Pages uses to host the site.
+- Push to the main branch and let the magic happen :blush:.
 
 ## Configuration
 
