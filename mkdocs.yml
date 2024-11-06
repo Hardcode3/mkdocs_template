@@ -1,0 +1,70 @@
+site_name: Documentation
+repo_url: https://github.com/Hardcode3/mkdocs_template
+repo_name: Hardcode3/mkdocs_template
+extra_css:
+  - stylesheets/extra.css
+theme:
+  name: material
+  logo: res/main_icon.png
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - navigation.footer
+    #- navigation.path
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+plugins:
+  - search
+
+
+markdown_extensions:
+    - def_list
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - attr_list
+    - admonition
+    - footnotes
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - markdown_include.include:
+        base_path: docs
+    - pymdownx.tabbed:
+        alternate_style: true
+    - abbr
+    - attr_list
+    - pymdownx.snippets
+    - md_in_html
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+    - Home: index.md
+    - Section 1:
+        - section1/page1.md
+        - section1/page2.md
+    - Section 2:
+        - section2/page1.md
+        - section2/page2.md
