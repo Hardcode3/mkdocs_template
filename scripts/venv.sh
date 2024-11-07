@@ -38,7 +38,14 @@ create_venv() {
     fi
 
     echo "Creating Python virtual environment... (may take a few seconds)"
-    python3 -m venv "$VENV_NAME" || return 1
+    if command -v python3 &> /dev/null; then
+        python3 -m venv "$VENV_NAME"
+    elif command -v python &> /dev/null; then
+        python -m venv "$VENV_NAME"
+    else
+        echo "Python is not installed."
+        return 1
+    fi
     echo "Finished creating the Python virtual environment."
 }
 
